@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var beaconManager: BeaconManager
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Image(systemName: "antenna.radiowaves.left.and.right")
+                .font(.system(size: 50))
+                .foregroundStyle(.blue)
+                .padding(.bottom, 10)
+
+            Text("Beacon Advertising…")
+                .font(.headline)
+                .padding()
         }
-        .padding()
     }
 }
 
